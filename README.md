@@ -4,7 +4,7 @@
 
 ## What is App On My Feet?
 
-> App On My Feet is desgined to help and support the runners from BACK ON MY FEET. URL:https://nyc.backonmyfeet.org/ A non-profit running organization that helps restore confidence and self esteem amongst the homeless and uses running as a cataylst. The main idea of this App is to help the program manager as well as the members to log and track progress. 
+> App On My Feet is desgined to help and support the runners from BACK ON MY FEET. URL:https://nyc.backonmyfeet.org A non-profit running organization that helps restore confidence and self esteem amongst the homeless and uses running as a cataylst. The main idea of this App is to help the program manager as well as the members to log and track the progress on their weekly runs, miles covered and the areas they ran in. 
 
 ## Wire Frames
 ![Screen Shot](https://github.com/Asher978/App_On_My_Feet/blob/master/assets/frame1.JPG)
