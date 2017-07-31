@@ -27,6 +27,7 @@
   *  CSS & Design: Used to design the pages.
   *  JavaScript / jQuery: DOM manipulation.
   *  Passport/bycrptjs: For authorizations.
+  *  Used Google API to create markers on routes ran.
 
 ### Notes on the App Structure
 
