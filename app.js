@@ -50,6 +50,8 @@ app.get('/', (req, res) => {
 });
 
 //importing routes
+const memberRoutes = require('./routes/member-routes');
+app.use('/members', memberRoutes);
 
 
 

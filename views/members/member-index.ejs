@@ -1,0 +1,9 @@
+<div class='member-container'>
+    <% for (let member of data) { %>
+      <div class='member'>
+        <h2><%= member.first_name %>  <span><%= member.last_name %></span></h2>
+        <h3>Half-Marathons: <%= member.h_marathon %></h3>
+        <h3>Full-Marathons: <%= member.f_marathon %></h3>
+      </div>
+    <% } %>
+  </div>
