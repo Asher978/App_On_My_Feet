@@ -26,6 +26,7 @@
   *  SQL / PG-PROMISE: Used to access DB.
   *  CSS & Design: Used to design the pages.
   *  JavaScript / jQuery: DOM manipulation.
+  *  Passport/bycrptjs: For authorizations.
 
 ### Notes on the App Structure
 
