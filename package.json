@@ -4,7 +4,10 @@
   "description": "![Screen Shot]()",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "debugger": "DEBUG=*:* npm run dev"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
     "express": "^4.15.3",
     "express-session": "^1.15.4",
     "method-override": "^2.3.9",
