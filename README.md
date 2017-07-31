@@ -12,6 +12,11 @@
 ![Screen Shot](https://github.com/Asher978/App_On_My_Feet/blob/master/assets/frame3.JPG)
 
 ## User Stories
+  *  User should be able to register by providing the required info(name, email, password)
+  *  User should be able to login after successfully registering
+  *  User should be able to input data on his/her run
+  *  User should be able to see the update on his/her profile after submitting the run
+  *  User should be able to view his/her profile 
 
 
 ## Technical Discussion
