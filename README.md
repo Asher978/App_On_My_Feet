@@ -20,10 +20,12 @@
 
 
 ## Technical Discussion
-
-> #### 
-  *  
-  *  
+  *  HTML / EJS: Used EJS to render information on the page.
+  *  Node and Express: Used to build the server.
+  *  MVC Pattern: Used Models, Views, Controllers pattern to interact with the databse and the user.
+  *  SQL / PG-PROMISE: Used to access DB.
+  *  CSS & Design: Used to design the pages.
+  *  JavaScript / jQuery: DOM manipulation.
 
 ### Notes on the App Structure
 
