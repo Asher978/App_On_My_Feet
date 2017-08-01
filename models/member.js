@@ -16,10 +16,10 @@ Member.findById = (id) => {
 Member.create = (member) => {
     return db.one(`
         INSERT INTO members
-        (first_name, last_name, h_marathon, f_marathon, t_miles)
-        VALUES ($1, $2, $3, $4, $5)
+        (first_name, last_name, h_marathon, f_marathon, t_miles, pic)
+        VALUES ($1, $2, $3, $4, $5, $6)
         RETURNING * 
-    `, [member.first_name, member.last_name, member.h_marathon, member.f_marathon, member.t_miles]);
+    `, [member.first_name, member.last_name, member.h_marathon, member.f_marathon, member.t_miles, member.pic]);
 }
 
 Member.update = (member, id) => {
@@ -29,10 +29,11 @@ Member.update = (member, id) => {
         last_name = $2,
         h_marathon = $3,
         f_marathon = $4,
-        t_miles = $5
-        WHERE id = $6
+        t_miles = $5,
+        pic = $6
+        WHERE id = $7
         RETURNING * 
-    `, [member.first_name, member.last_name, member.h_marathon, member.f_marathon, member.t_miles, id]);
+    `, [member.first_name, member.last_name, member.h_marathon, member.f_marathon, member.t_miles, member.pic, id]);
 }
 
 Member.destroy = (id) => {

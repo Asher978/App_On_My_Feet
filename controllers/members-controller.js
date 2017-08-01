@@ -36,6 +36,7 @@ memberController.create = (req, res) => {
         h_marathon: req.body.h_marathon,
         f_marathon: req.body.f_marathon,
         t_miles: req.body.t_miles,
+        pic: req.body.pic,
     }).then(()=> {
         res.redirect('/members');
     }).catch(err => {
@@ -47,10 +48,11 @@ memberController.create = (req, res) => {
 memberController.update = (req, res) => {
     Member.update({
         first_name: req.body.first_name,
-        last_name: req.body.last_name,
+        last_name: req.body.l_name,
         h_marathon: req.body.h_marathon,
         f_marathon: req.body.f_marathon,
         t_miles: req.body.t_miles,
+        pic: req.body.pic,
     }, req.params.id).then(member => {
         res.redirect(`/members/${req.params.id}`);
     }).catch(err => {
