@@ -4,6 +4,11 @@
         <h2><%= member.first_name %>  <span><%= member.last_name %></span></h2>
         <h3>Half-Marathons: <%= member.h_marathon %></h3>
         <h3>Full-Marathons: <%= member.f_marathon %></h3>
+        <h3>Total Miles: <%= member.t_miles %></h3>
+        <a href='/members/<%= member.id%>'>View Profile</a>
+        <form method="POST" action="/members/<%= member.id %>?_method=DELETE">
+                <input type='submit' value='Delete Profile' />
+            </form> 
       </div>
     <% } %>
   </div>

@@ -1,0 +1,14 @@
+
+
+
+<div>
+    <h1><%= data.first_name %>  <span><%= data.last_name %></span></h1>
+    <h3>Half-Marathons: <%= data.h_marathon %></h3>
+    <h3>Full-Marathons: <%= data.f_marathon %></h3>
+    <h3>Miles Run: <%= data.t_miles %></h3>
+    <a href="/members">Members</a>
+    <a href="/members/<%=data.id%>/edit">Update a member</a>
+     <form method="POST" action="/members/<%= data.id %>?_method=DELETE">
+        <input type='submit' value='DELETE PROFILE!!' />
+    </form>
+</div>

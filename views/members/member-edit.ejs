@@ -1,0 +1,10 @@
+
+
+<form method='POST' action='/members/<%= data.id %>?_method=PUT'>
+  <input name='first_name' type='text' value='<%= data.first_name %>' />
+  <input name='last_name' type='text' value='<%= data.last_name %>' />
+  <input name='h_marathon' type='number' value='<%= data.h_marathon %>'>
+  <input name='f_marathon' type='number' value='<%= data.f_marathon%>'>
+  <input name='t_miles' type='number' value='<%= data.t_miles%>'>
+  <input type='submit' value='Edit it!!' />
+</form>
