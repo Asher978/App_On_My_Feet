@@ -54,8 +54,6 @@ memberController.createRun = (req, res) => {
         street2: req.body.street2,
         city: req.body.city,
     }, req.params.id).then(run => {
-        res.locals.street1 = run.street1;
-        console.log(res.locals.street1);
         res.redirect(`/members/${req.params.id}`);
         // console.log(run);
     }).catch(err => {

@@ -1,7 +1,8 @@
 const express = require('express');
 const memberRoutes = express.Router();
 const memberController = require('../controllers/members-controller');
-const markerHelper = require('../services/marker/marker-helper')
+const markerHelper = require('../services/marker/marker-helper');
+// const {getLngLat} = require('../services/marker/marker-helper');
 
 
 memberRoutes.get('/', memberController.index);
@@ -27,10 +28,7 @@ memberRoutes.get('/:id/addRun', (req, res) => {
     });
 });
 
-
-
-
-memberRoutes.post('/:id/new', memberController.createRun);
+memberRoutes.post('/:id/new', markerHelper.getLngLat, memberController.createRun);
 memberRoutes.get('/:id/edit', memberController.edit);
 memberRoutes.get('/:id', memberController.show);
 memberRoutes.put('/:id', memberController.update);
