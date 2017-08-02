@@ -43,7 +43,7 @@ Member.destroy = (id) => {
     `, [id]);
 }
 
-// for logging member runs
+// for posting member runs
 Member.createRun = (run, id) => {
      return db.one(`
          INSERT INTO runs
@@ -51,6 +51,13 @@ Member.createRun = (run, id) => {
          VALUES ($1, $2, $3, $4, $5, $6)
          RETURNING *
    `, [run.rundate, run.milesRan, run.street1, run.street2, run.city, id]);
+}
+
+Member.RunsById = (id) => {
+    return db.query(`
+        SELECT * FROM runs
+        WHERE member_id = $1
+    `, [id]);
 }
 
 

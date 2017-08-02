@@ -45,6 +45,7 @@ memberController.create = (req, res) => {
     });
 };
 
+// post runs on second table
 memberController.createRun = (req, res) => {
     Member.createRun({
         rundate: req.body.rundate,
@@ -53,13 +54,30 @@ memberController.createRun = (req, res) => {
         street2: req.body.street2,
         city: req.body.city,
     }, req.params.id).then(run => {
-        res.redirect(`/members/${req.params.id}`)
-        console.log(run);
+        res.locals.street1 = run.street1;
+        console.log(res.locals.street1);
+        res.redirect(`/members/${req.params.id}`);
+        // console.log(run);
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);
     })
 }
+//show runs of members - data coming form second table
+memberController.showRuns = (req, res) => {
+  Member.RunsById(req.params.id)
+    .then(runs => {
+      res.render('members/member-run', {
+        currentPage: 'showRuns',
+        message: 'ok',
+        data: runs,
+      });
+    console.log(runs)
+    }).catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+};
 
 memberController.update = (req, res) => {
     Member.update({
