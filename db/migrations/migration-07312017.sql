@@ -11,3 +11,15 @@ CREATE TABLE IF NOT EXISTS members (
     t_miles INTEGER,
     pic VARCHAR(1000)
 );
+
+CREATE TABLE IF NOT EXISTS runs (
+    id SERIAL PRIMARY KEY,
+    rundate DATE,
+    milesRan INTEGER,
+    street1 VARCHAR(500),
+    street2 VARCHAR(500),
+    city VARCHAR(500),
+    member_id INTEGER REFERENCES members(id)
+);
+
+-- TODO add columns for cross streets (should be an intersection)

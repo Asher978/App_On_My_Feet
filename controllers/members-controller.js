@@ -45,6 +45,22 @@ memberController.create = (req, res) => {
     });
 };
 
+memberController.createRun = (req, res) => {
+    Member.createRun({
+        rundate: req.body.rundate,
+        milesRan: req.body.milesRan,
+        street1: req.body.street1,
+        street2: req.body.street2,
+        city: req.body.city,
+    }, req.params.id).then(run => {
+        res.redirect(`/members/${req.params.id}`)
+        console.log(run);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+}
+
 memberController.update = (req, res) => {
     Member.update({
         first_name: req.body.first_name,
