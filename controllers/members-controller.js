@@ -53,6 +53,8 @@ memberController.createRun = (req, res) => {
         street1: req.body.street1,
         street2: req.body.street2,
         city: req.body.city,
+        lat: res.locals.lat,
+        log: res.locals.lng,
     }, req.params.id).then(run => {
         res.redirect(`/members/${req.params.id}`);
         // console.log(run);

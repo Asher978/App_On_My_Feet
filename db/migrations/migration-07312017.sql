@@ -22,4 +22,10 @@ CREATE TABLE IF NOT EXISTS runs (
     member_id INTEGER REFERENCES members(id)
 );
 
+ALTER TABLE runs 
+
+    ADD COLUMN Lat FLOAT8, 
+    ADD COLUMN Log FLOAT8
+
+
 -- TODO add columns for cross streets (should be an intersection)

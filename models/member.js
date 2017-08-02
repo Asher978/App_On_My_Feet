@@ -47,10 +47,10 @@ Member.destroy = (id) => {
 Member.createRun = (run, id) => {
      return db.one(`
          INSERT INTO runs
-         (rundate, milesRan, street1, street2, city, member_id)
-         VALUES ($1, $2, $3, $4, $5, $6)
+         (rundate, milesRan, street1, street2, city, member_id, lat, log)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
          RETURNING *
-   `, [run.rundate, run.milesRan, run.street1, run.street2, run.city, id]);
+   `, [run.rundate, run.milesRan, run.street1, run.street2, run.city, id, run.lat, run.log]);
 }
 
 Member.RunsById = (id) => {
