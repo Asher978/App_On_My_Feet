@@ -1,14 +1,53 @@
 
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+        </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+   <li id="member" data-id='<%= data.member_id %>'>id</li> 
+        <% for (let run of data) { %>
+            
+            <center>
+                <h3>Date of the Run: <%= run.rundate %></h3>
+                <h3>Miles Ran: <%= run.milesran %></h3>
+                <h3>Street 1:  <%= run.street1 %></h3>
+                <h3>Street 2: <%= run.street2 %></h3>
+                <h3>City: <%= run.city %></h3>
+            </center>
+
+        <% } %>
+        <div id="map"></div>
 
 
-<% for (let run of data) { %>
-    
-    <center>
-        <h3>Date of the Run: <%= run.rundate %></h3>
-        <h3>Miles Ran: <%= run.milesran %></h3>
-        <h3>Street 1:  <%= run.street1 %></h3>
-        <h3>Street 2: <%= run.street2 %></h3>
-        <h3>City: <%= run.city %></h3>
-    </center>
+    <script src="/src/jquery.js"></script>
+    <script src="/src/main.js"></script>
+    </body>
+</html>
 
-<% } %>
+

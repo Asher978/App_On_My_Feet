@@ -10,11 +10,8 @@
     <a href="/members">Members</a>
      <a href="/members/<%=data.id%>/addRun">Add a Run!</a> 
      <a href="/members/<%=data.id%>/run">View all Runs</a> 
-    <a href="/members/<%=data.id%>/edit">Update a member</a>
+    <a href="/members/<%=data.id%>/edit">Update Profile</a>
      <form method="POST" action="/members/<%= data.id %>?_method=DELETE">
         <input type='submit' value='DELETE PROFILE!!' />
     </form>
-</div>
-<div>
-    <h2>Street 1: <%=  %></h2>
 </div>

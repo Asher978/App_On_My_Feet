@@ -118,8 +118,4 @@ memberController.delete = (req, res) => {
     });
 }
 
-
-
-
-
 module.exports = memberController;
