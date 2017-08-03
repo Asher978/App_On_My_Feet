@@ -16,9 +16,7 @@ memberRoutes.get('/add', (req, res) => {
 
 // getting runs by member-id
 memberRoutes.get('/:id/run', memberController.showRuns);
-// memberRoutes.post('/:id/run', markerHelper.googleMarker, (req, res) => {
-//     res.render('/members/member-run')
-// });
+
 
 // adding a run by member ID
 memberRoutes.get('/:id/addRun', (req, res) => {

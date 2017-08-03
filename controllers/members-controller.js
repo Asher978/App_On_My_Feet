@@ -71,6 +71,7 @@ memberController.showRuns = (req, res) => {
         currentPage: 'showRuns',
         message: 'ok',
         data: runs,
+        id: req.params.id,
       });
     console.log(runs)
     }).catch(err => {
