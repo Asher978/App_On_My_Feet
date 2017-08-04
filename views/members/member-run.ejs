@@ -10,17 +10,23 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"
+        integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"
+        integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA=="
+        crossorigin=""></script>
         <style>
-                        
+            body { margin:0; padding:0; }
+            .container { position: relative; height: 40%; width: 100%;}
+            #mapid { position: absolute; width:50%; height: 50%; margin: 0 auto; }           
         </style> 
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyCY1wx8dCD5FOnocfJzK2W5dXq2-fy7-VY"type="text/javascript"></script>
-
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="container">
         <h3 id='idcatcher' data-id='<%= id %>'>Id: <%= id %></h3>
         <% for (let run of data) { %>
             
@@ -33,12 +39,13 @@
             </center>
 
         <% } %>
-        <div id="map" style="width: 80%; height: 400px;"></div>
+        </div>
+
+        <div id='mapid'></div>
 
 
-    <script src="/src/jquery.js"></script>
-    <script src="/src/main.js"></script>
-    
+      <script src="/src/jquery.js"></script>  
+      <script src="/src/map.js"></script>  
     </body>
 </html>
 
