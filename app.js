@@ -44,7 +44,7 @@ app.listen(port, () => {
 //index route
 app.get('/', (req, res) => {
     res.render('index', {
-        message: 'Welcome to APP On My Feet!',
+        message: 'APP On My Feet!',
         currentPage: 'home',
     });
 });
@@ -56,6 +56,12 @@ app.use('/members', memberRoutes);
 // route handler for api
 const apiRoutes = require('./routes/api-routes');
 app.use('/api', apiRoutes);
+
+// auth-routes
+const authRoutes = require('./routes/auth-routes');
+app.use('/auth', authRoutes);
+const userRoutes = require('./routes/user-routes');
+app.use('/user', userRoutes);
 
 
 

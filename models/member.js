@@ -13,13 +13,13 @@ Member.findById = (id) => {
     `, [id]);
 }
 
-Member.create = (member) => {
+Member.create = (member, userid) => {
     return db.one(`
         INSERT INTO members
-        (first_name, last_name, h_marathon, f_marathon, t_miles, pic)
+        (first_name, last_name, h_marathon, f_marathon, t_miles, pic, user_id)
         VALUES ($1, $2, $3, $4, $5, $6)
         RETURNING * 
-    `, [member.first_name, member.last_name, member.h_marathon, member.f_marathon, member.t_miles, member.pic]);
+    `, [member.first_name, member.last_name, member.h_marathon, member.f_marathon, member.t_miles, member.pic, userid]);
 }
 
 Member.update = (member, id) => {

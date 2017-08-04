@@ -37,7 +37,7 @@ memberController.create = (req, res) => {
         f_marathon: req.body.f_marathon,
         t_miles: req.body.t_miles,
         pic: req.body.pic,
-    }).then(()=> {
+    }, req.user.id).then(()=> {
         res.redirect('/members');
     }).catch(err => {
         console.log(err);

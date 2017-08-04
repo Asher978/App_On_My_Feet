@@ -22,6 +22,18 @@ CREATE TABLE IF NOT EXISTS runs (
     member_id INTEGER REFERENCES members(id)
 );
 
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255) UNIQUE NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password_digest TEXT NOT NULL,
+  firstname VARCHAR(255),
+  lastname VARCHAR(255)
+);
+
+ALTER TABLE members 
+ADD COLUMN user_id INTEGER REFERENCES users(id);
+
 ALTER TABLE runs 
 
     ADD COLUMN Lat FLOAT8, 

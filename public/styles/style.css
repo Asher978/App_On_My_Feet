@@ -1,0 +1,67 @@
+/* LANDING PAGE */
+body {
+    background: url(/images/main.jpg); 
+    background-size: cover; 
+    font-family: sans-serif;
+}
+
+.heading {
+    font-size: 9em;
+    color: white;
+    display: flex; 
+    width: 100vw;
+    justify-content: center;  
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px; 
+    animation: lightSpeedOut 2.5s both;
+    animation-iteration-count: infinite;
+    font-family: 'Faster One', cursive;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* @keyframes myAnimation {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+} */
+@keyframes lightSpeedOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(5%, 0, 0) skewX(25deg);
+    opacity: 0.1;
+  }
+}
+
+.entercontainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.enter {
+    margin: 20%;
+    background-color: rgba(0,0,0,0.5);
+    color: silver;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 1%;    
+    border-radius: 5px;
+    transition: linear 0.4s;
+}
+
+.enter:hover {
+    color: rgba(0,0,0,1);
+    background-color: grey;
+}
