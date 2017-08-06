@@ -7,7 +7,7 @@ body {
 
 .heading {
     font-size: 9em;
-    color: white;
+    color: blue;
     display: flex; 
     width: 100vw;
     justify-content: center;  
@@ -19,21 +19,6 @@ body {
     font-family: 'Faster One', cursive;
 }
 
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-/* @keyframes myAnimation {
-  from {
-    opacity: 0;
-    transform: scale3d(.3, .3, .3);
-  }
-
-  50% {
-    opacity: 1;
-  }
-} */
 @keyframes lightSpeedOut {
   from {
     opacity: 1;

@@ -31,13 +31,17 @@ CREATE TABLE IF NOT EXISTS users (
   lastname VARCHAR(255)
 );
 
+CREATE TABLE IF NOT EXISTS comments (
+    id SERIAL PRIMARY KEY,
+    comments VARCHAR(1200),
+    rcvngMember INTEGER REFERENCES members(id),
+    lvngMember INTEGER REFERENCES users(id) 
+);
+
 ALTER TABLE members 
 ADD COLUMN user_id INTEGER REFERENCES users(id);
 
 ALTER TABLE runs 
-
     ADD COLUMN Lat FLOAT8, 
     ADD COLUMN Log FLOAT8
 
-
--- TODO add columns for cross streets (should be an intersection)

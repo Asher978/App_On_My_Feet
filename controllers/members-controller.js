@@ -63,6 +63,20 @@ memberController.createRun = (req, res) => {
         res.status(500).json(err);
     })
 }
+
+memberController.createComment = (req, res) => {
+    Member.createComment({
+        comments: req.body.comments,
+    }, req.params.id, req.params.username).then(comment => {
+        res.redirect(`/members/${req.params.id}`)
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+
+}
+
+
 //show runs of members - data coming form second table
 memberController.showRuns = (req, res) => {
   Member.RunsById(req.params.id)
@@ -83,7 +97,7 @@ memberController.showRuns = (req, res) => {
 memberController.update = (req, res) => {
     Member.update({
         first_name: req.body.first_name,
-        last_name: req.body.l_name,
+        last_name: req.body.last_name,
         h_marathon: req.body.h_marathon,
         f_marathon: req.body.f_marathon,
         t_miles: req.body.t_miles,

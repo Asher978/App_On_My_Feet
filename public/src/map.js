@@ -25,7 +25,7 @@ function drawMap () {
         maxZoom: 15,
         minZoom: 10,
     }).addTo(map);
-    for (var i = 0; i < locat.length; i++) {
+    for (let i=0; i<locat.length; i++) {
         marker = new L.marker([locat[i][0],locat[i][1]])
         .bindPopup(locat[i][2]+':miles')
         .addTo(map);

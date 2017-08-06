@@ -17,7 +17,7 @@ Member.create = (member, userid) => {
     return db.one(`
         INSERT INTO members
         (first_name, last_name, h_marathon, f_marathon, t_miles, pic, user_id)
-        VALUES ($1, $2, $3, $4, $5, $6)
+        VALUES ($1, $2, $3, $4, $5, $6, $7)
         RETURNING * 
     `, [member.first_name, member.last_name, member.h_marathon, member.f_marathon, member.t_miles, member.pic, userid]);
 }
@@ -59,6 +59,18 @@ Member.RunsById = (id) => {
         WHERE member_id = $1
     `, [id]);
 }
+
+// for posting comments
+Member.createComment = (comment, id) => {
+    return db.one(`
+        INSERT INTO comments
+        (comments, rcvngmember, lvngmember)
+        VALUES ($1, $2, $3)
+        RETURNING *
+    `, [comment.comments, id, process.env.user_id])
+}
+
+
 
 
 

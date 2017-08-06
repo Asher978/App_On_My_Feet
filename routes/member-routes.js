@@ -6,7 +6,7 @@ const markerHelper = require('../services/marker/marker-helper');
 // const {getLngLat} = require('../services/marker/marker-helper');
 
 
-memberRoutes.get('/', memberController.index);
+memberRoutes.get('/', authHelpers.loginRequired, memberController.index);
 
 // adding a memeber
 memberRoutes.get('/add', authHelpers.loginRequired, (req, res) => {
@@ -15,18 +15,30 @@ memberRoutes.get('/add', authHelpers.loginRequired, (req, res) => {
     });
 });
 
+
+
+memberRoutes.get('/:id/AddComment', authHelpers.loginRequired, (req, res) => {
+    res.render('members/member-AddComment', {
+        currentPage: 'AddComment',
+        id: req.params.id,
+        username: req.params.username,
+    });
+});
+
 // getting runs by member-id
-memberRoutes.get('/:id/run', memberController.showRuns);
+memberRoutes.get('/:id/run', authHelpers.loginRequired, memberController.showRuns);
 
 
 // adding a run by member ID
-memberRoutes.get('/:id/addRun', (req, res) => {
+memberRoutes.get('/:id/addRun', authHelpers.loginRequired, (req, res) => {
     res.render('members/member-addRun', {
         currentPage: 'addRun',
         id: req.params.id,
     });
 });
 
+//adding comment to a member by its ID
+memberRoutes.post('/:id/new2', authHelpers.loginRequired, memberController.createComment);
 memberRoutes.post('/:id/new', markerHelper.getLngLat, memberController.createRun);
 memberRoutes.get('/:id/edit', memberController.edit);
 memberRoutes.get('/:id', memberController.show);
