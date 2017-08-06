@@ -2,11 +2,11 @@ const db = require('../db/config');
 
 const User = {};
 
-User.findByUserName = userName => {
+User.findByUserName = (userName, firstname, lastname, email) => {
   return db.oneOrNone(`
     SELECT * FROM users
     WHERE username = $1
-  `, [userName]);
+  `, [userName, firstname, lastname, email]);
 };
 
 User.create = user => {
@@ -18,7 +18,7 @@ User.create = user => {
   `, [user.username, user.email, user.password_digest, user.firstname, user.lastname]);
 };
 
-User.findUserMember = id => {
+User.findUserMember = (id) => {
   return db.manyOrNone(`
     SELECT * FROM members
     WHERE user_id = $1

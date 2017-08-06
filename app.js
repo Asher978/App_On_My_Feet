@@ -44,7 +44,7 @@ app.listen(port, () => {
 //index route
 app.get('/', (req, res) => {
     res.render('index', {
-        message: 'APP On My Feet!',
+        message: 'Welcome To APP On My Feet!',
         currentPage: 'home',
     });
 });

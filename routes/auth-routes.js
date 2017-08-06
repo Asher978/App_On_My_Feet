@@ -6,20 +6,22 @@ const usersController = require('../controllers/users-controller');
 
 authRouter.get('/login', authHelpers.loginRedirect, (req, res) => {
   res.render('auth/login', {
-    currentPage: 'login', // this is specific to the movies app bc of the CSS setup
+    currentPage: 'login',
+    message: 'Welcome To APP On My Feet!',
   });
 });
 
 authRouter.get('/register', authHelpers.loginRedirect, (req, res) => {
   res.render('auth/register', {
-    currentPage: 'register', // see above
+    currentPage: 'register', 
+    message: 'Welcome To APP On My Feet!',
   });
 });
 
 authRouter.post('/register', usersController.create);
 
 authRouter.post('/login', passport.authenticate('local', {
-    successRedirect: '/members', 
+    successRedirect: '/user', 
     failureRedirect: '/auth/login',
     failureFlash: true,
   })

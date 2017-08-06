@@ -1,12 +1,101 @@
-
-
-<div class='movie-container'>
-  <form method='POST' action='/auth/register'>
-    <input name='username' type='text' placeholder='username' required />
-    <input name='email' type='email' placeholder='email' required />
-    <input name='password' type='password' placeholder='password' required />
-    <input name='firstname' type='text' placeholder='first name' required />
-    <input name='lastname' type='text' placeholder='last name' required />
-    <input type='submit' value='Register!' />
-  </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Members</title>
+    <!-- Bootstrap -->
+    
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/jumbotron.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link href="../bootstrap/jumbotron-narrow.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='/styles/style.css'>
+    
+  </head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <p id="logo" class="navbar-brand">App On My Feet</p>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+            <div class="form-group">
+                <a href="/" class="btn btn-info btn-lg">Home</a>
+            </div>
+            <div class="form-group">
+                <a href="/auth/login" class="btn btn-info btn-lg">Login</a> 
+            </div>
+            <div class="form-group">
+                <a href="/auth/register" class="btn btn-info btn-lg">Register</a> 
+          </div>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>  
+<div class="jumbotron jumbotron-billboard">
+  <div class="img"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="heading"><%= message %></h1>
+                <hr class="my-4">
+                 <p id="message" class="lead">
+                    We welcome you to joining our team. Here you will find many helpful resources
+                    that are designed to improve your experience with us. Use this app and keep track
+                    of yours and others progress. You can explore through other member's profile as well, 
+                    view their performance and leave them a comment. Sign up and get your profile!
+                </p>
+                  <hr class="my-4">
+                <a href="/auth/register" class="btn btn-info btn-lg">Sign Up</a> 
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="container">
+ <div id="inside">
+   <div id="center">
+      <h1>Account Registration</h1>
+      <p>Please fill out the required info!</p>
+      <form method='POST' action='/auth/register'>
+        <div class="form-group">
+          <label class="sr-only">Username</label>
+          <input type="text" class="form-control" name="username" title="Username" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only">Email</label>
+          <input type="email" class="form-control" name="email" title="Email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only">Password</label>
+          <input type="password" class="form-control" name="password" title="Password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only">First Name</label>
+          <input type="text" class="form-control" name="firstname" title="firstname" placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only">Last Name</label>
+          <input type="text" class="form-control" name="lastname" title="lastname" placeholder="Last Name" required>
+        </div>
+        <p>Already have an account? <a href="/auth/login">Log In</a></p>
+        <input type="submit" value="REGISTER"> <input type="reset" value="RESET">
+      </form>
+   </div>
+ </div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>

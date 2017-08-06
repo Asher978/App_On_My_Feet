@@ -15,7 +15,7 @@ usersController.create = (req, res) => {
   }).then(user => {
     req.login(user, (err) => {
       if (err) return next(err);
-      res.redirect('/members');
+      res.redirect('user');
     });
   }).catch(err => {
     console.log(err);
@@ -25,12 +25,12 @@ usersController.create = (req, res) => {
 
 usersController.index = (req, res) => {
   User.findUserMember(req.user.id)
-    .then(member => {
-        res.json({
-        user: req.user,
-        data: 'Put a user profile on this route',
-        member: member,
-      });
+    .then(user => {
+      res.render('user', {
+        data: user,
+        currentPage: 'user',
+        userInfo: req.user,
+        });
     }).catch(err => {
       console.log(err);
       res.status(500).json({err: err});

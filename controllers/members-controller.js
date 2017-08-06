@@ -3,7 +3,7 @@ const Member = require('../models/member');
 const memberController = {};
 
 memberController.index = (req, res) => {
-    Member.findAll()
+    Member.findAll(req.params.id)
     .then(members => {
         res.render('members/member-index', {
             currentPage: 'index',
