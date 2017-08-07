@@ -1,11 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="../bootstrap/jumbotron.css" rel="stylesheet">
+         <link href="../bootstrap/jumbotron-narrow.css" rel="stylesheet"> 
+        <link rel='stylesheet' type='text/css' href='/styles/style.css'>
+        <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">   
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+    </body>
+</html>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <p id="logo" class="navbar-brand">App On My Feet</p>   
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+            <div class="form-group">
+                <a href="/" class="btn btn-info btn-lg">Home</a>
+            </div>
+            <div class="form-group">
+                <a href="/members" class="btn btn-info btn-lg">View Members</a> 
+            </div>
+            <div class="form-group">
+                <a href="/auth/logout" class="btn btn-info btn-lg">Logout</a> 
+            </div>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>  
 
+    <div class="jumbotron jumbotron-billboard">
+  <div class="img"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 id="profileHeading">Profile Generation</h1>
+                <hr class="my-4">
+                 <p id="message" class="lead">
+                    Please enter the required information to complete the process and generate your 
+                    Running Profile!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<form method='POST' action='/members'>
-  <input name='first_name' type='text' placeholder='First Name' />
-  <input name='last_name' type='text' placeholder='Last Name' />
-  <input name='h_marathon' type='number' placeholder='Half-Marathon'>
-  <input name='f_marathon' type='text' placeholder='Full-Marathon'>
-  <input name='t_miles' type='number' placeholder='Miles'>
-  <input name='pic' type='URL' placeholder='Picture URL'>
-  <input type='submit' value='Submit!' />
-</form>
+<div class="container">
+  <div id="inside">
+    <div id="center">
+        <h1>Profile Information</h1>
+        <p>Please fill out the required info!</p>
+        <form method='POST' action='/auth/register'>
+          <div class="form-group">
+            <label class="sr-only">First Name</label>
+            <input type="text" class="form-control" name="first_name" title="First Name" placeholder="FIRST NAME" required>
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Last Name</label>
+            <input type="text" class="form-control" name="last_name" title="Last Name" placeholder="LAST NAME" required>
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Half Marathons</label>
+            <input type="number" class="form-control" name="h_marathon" title="H Marathon" placeholder="Half Marathons" required>
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Full Marathons</label>
+            <input type="number" class="form-control" name="f_marathon" title="F Marathon" placeholder="Full Marathons" required>
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Total Miles</label>
+            <input type="number" class="form-control" name="t_miles" title="T Miles" placeholder="Total Miles" required>
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Picture</label>
+            <input type="URL" class="form-control" name="pic" title="Picture" placeholder="PICTURE URL" required>
+          </div>
+          <p>Already have a profile? <a href="/members">View Profile</a></p>
+          <input type="submit" value="SUBMIT"> <input type="reset" value="RESET">
+        </form>
+    </div>
+  </div>
+  <footer>
+        <p>&copy; Ash 2017.</p>
+      </footer>
+  </div>  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>

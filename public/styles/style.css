@@ -173,3 +173,34 @@ input[type=reset]:hover {
     width: 300px;
     box-sizing: border-box;
 }
+
+#single {
+  margin: 4%;
+}
+
+#memberPic {
+  height: 400px;
+  width: 300px;
+}
+
+/* MEMBERS PROFILE PAGE */
+
+#profileHeading {
+  font-family: 'Faster One', cursive;
+  color: white; 
+}
+
+/* MEMBER RUN STYLING */
+
+.containerMap { 
+  position: relative; 
+  height: 40%; width: 100%;
+
+}
+
+#mapid {
+  position: absolute;  
+  width:70%; 
+  height: 50%; 
+  /* margin: 0 auto;  */
+}

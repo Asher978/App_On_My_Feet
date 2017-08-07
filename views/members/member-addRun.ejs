@@ -1,10 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/bootstrap/jumbotron.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"
+        integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"
+        integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA=="
+        crossorigin=""></script>
+        <link href="/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <!-- <link href="../bootstrap/jumbotron-narrow.css" rel="stylesheet"> -->
+        <link rel='stylesheet' type='text/css' href='/styles/style.css'>
+        <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+        <link rel='stylesheet' type='text/css' href='/styles/jumbo.css'>
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <p id="log" class="navbar-brand">App On My Feet</p>   
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+            <div class="form-group">
+              <a class="btn btn-info btn-lg" href="/members">Home</a>
+            </div>
+            <div class="form-group">
+              <a class="btn btn-info btn-lg" href="/members/<%=id%>">Back</a>
+            </div>
+            <div class="form-group">
+              <a class="btn btn-info btn-lg" href="/auth/logout">Log Out</a>
+            </div>
+          </div>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+ <div id="inside">
+   <div id="center">
+      <h1>Enter the Run Info</h1>
+      <form method='POST' action='/members/<%=id%>/new'>
+        <div class="form-group">
+          <label class="sr-only">Run Date</label>
+          <input type="date" class="form-control" name="rundate" title="Run Date" placeholder="Run Date" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only">Miles Ran</label>
+          <input type="number" class="form-control" name="milesRan" title="Miles Ran" placeholder="Miles Ran" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only">Street 1</label>
+          <input type="text" class="form-control" name="street1" title="Street 1" placeholder="1st Intersecting Street" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only">Street 2</label>
+          <input type="text" class="form-control" name="street2" title="Street 2" placeholder="2nd Intersecting Street" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only">City</label>
+          <input type="text" class="form-control" name="city" title="City" placeholder="City" required>
+        </div>
+        <input type="submit" value="SUBMIT">
+      </form>
+   </div>
+ </div>
+</div>
 
 
-<form method='POST' action='/members/<%=id%>/new'>
+<!-- <form method='POST' action='/members/<%=id%>/new'>
   <input name='rundate' type='date' placeholder='' />
   <input name='milesRan' type='number' placeholder='Miles Ran' />
   <input name='street1' type='text' placeholder='1st Intersecting Street' />
   <input name='street2' type='text' placeholder='2nd Intersecting Street'>
   <input name='city' type='text' placeholder='City'>
   <input type='submit' value='Submit!' />
-</form>
+</form> -->

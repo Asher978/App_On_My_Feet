@@ -12,6 +12,7 @@ memberRoutes.get('/', authHelpers.loginRequired, memberController.index);
 memberRoutes.get('/add', authHelpers.loginRequired, (req, res) => {
     res.render('members/member-add', {
         currentPage: 'add',
+        user: req.param.username,
     });
 });
 
@@ -27,6 +28,8 @@ memberRoutes.get('/:id/AddComment', authHelpers.loginRequired, (req, res) => {
 
 // getting runs by member-id
 memberRoutes.get('/:id/run', authHelpers.loginRequired, memberController.showRuns);
+
+memberRoutes.get('/:id/comment', authHelpers.loginRequired, memberController.showComments);
 
 
 // adding a run by member ID

@@ -87,10 +87,25 @@ memberController.showRuns = (req, res) => {
         data: runs,
         id: req.params.id,
       });
-    console.log(runs)
+    // console.log(runs)
     }).catch(err => {
       console.log(err);
       res.status(500).json(err);
+    });
+};
+
+// comments by id
+memberController.showComments = (req, res) => {
+    Member.commentsById(req.params.id)
+    .then(comments => {
+        res.render('members/member-comment', {
+            currentPage: 'comments',
+            data: comments,
+            id: req.params.id,
+        });
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
     });
 };
 

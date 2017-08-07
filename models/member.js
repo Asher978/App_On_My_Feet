@@ -60,6 +60,14 @@ Member.RunsById = (id) => {
     `, [id]);
 }
 
+// members comments
+Member.commentsById = (id) => {
+    return db.query(`
+        SELECT * FROM comments
+        WHERE rcvngmember = $1
+    `, [id]);
+}
+
 // for posting comments
 Member.createComment = (comment, id) => {
     return db.one(`
