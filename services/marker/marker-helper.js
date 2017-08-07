@@ -11,8 +11,10 @@ function getLngLat (req, res, next) {
         next();
     }).then(jsonRes => {
         // console.log(jsonRes);
-        return res.locals.lat = jsonRes.results[0].geometry.location.lat;
-        return res.locals.lng = jsonRes.results[0].geometry.location.lng;
+        console.log(API_KEY);
+
+        res.locals.lat = jsonRes.results[0].geometry.location.lat;
+        res.locals.lng = jsonRes.results[0].geometry.location.lng;
         console.log(`Lat${res.locals.lat}, Long: ${res.locals.lng}`)
         next();
     }).catch(err => {
