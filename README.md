@@ -1,6 +1,6 @@
 # App On My Feet
 
-![Screen Shot]()
+![Screen Shot](https://github.com/Asher978/App_On_My_Feet/blob/master/assets/appScreenshot.png)
 
 ## What is App On My Feet?
 
