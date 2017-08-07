@@ -94,6 +94,37 @@ memberController.showRuns = (req, res) => {
     });
 };
 
+// showing count of runs
+memberController.RunCount = (req, res) => {
+    Member.RunCount(req.params.id)
+    .then(count => {
+        res.render('members/member-runCount', {
+            data: [count],
+            id: req.params.id,
+        });
+        console.log(count);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+};
+memberController.index = (req, res) => {
+    Member.findAll(req.params.id)
+    .then(members => {
+        res.render('members/member-index', {
+            currentPage: 'index',
+            data: members, 
+        });
+    }).catch(err => {
+        console.log(err);
+        res.status(500).josn(err);
+    })
+};
+
+
+
+
+
 // comments by id
 memberController.showComments = (req, res) => {
     Member.commentsById(req.params.id)

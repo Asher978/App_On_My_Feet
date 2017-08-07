@@ -78,6 +78,12 @@ Member.createComment = (comment, id) => {
     `, [comment.comments, id, process.env.user_id, process.env.username])
 }
 
+Member.RunCount = () => {
+    return db.query(`
+        select * from runs join members on runs.member_id = members.id
+    `)
+}
+
 
 
 

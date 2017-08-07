@@ -68,11 +68,20 @@ function drawMap () {
 }
 ```
 
+### Currently in works
+
+*  Ranking page
+
+
+
 ### Opportunities 
 
 *  Showing who left the comment for the member
 *  Deleting Runs
 *  Finishing up partials for headers & footers
+*  Create a ranking page where all members can view the entire team's runs.
+*  Navbar menus (implement more options that are related to the current page)
+*  Dropdown Navbar menus (responsiveness - currently no dropdown option in mobile view)
 
 
 ## URL: https://peaceful-waters-85500.herokuapp.com/

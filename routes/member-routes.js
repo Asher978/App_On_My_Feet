@@ -28,6 +28,7 @@ memberRoutes.get('/:id/AddComment', authHelpers.loginRequired, (req, res) => {
 
 // getting runs by member-id
 memberRoutes.get('/:id/run', authHelpers.loginRequired, memberController.showRuns);
+memberRoutes.get('/:id/runCount', authHelpers.loginRequired, memberController.RunCount);
 
 memberRoutes.get('/:id/comment', authHelpers.loginRequired, memberController.showComments);
 
