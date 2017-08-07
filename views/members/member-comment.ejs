@@ -53,11 +53,12 @@
         </div><!--/.navbar-collapse -->
       </div>
     </nav>   
-
+    <h3 id='idcatcher' data-id='<%= process.env.username %>'></h3> 
      <div class="container">
          <% for (let comment of data) { %>
             <div class='col-md-4'>
                 <h3>Comment: <%= comment.comments %></h3>
+                <!-- <p>From: <%=  %> </p> -->
             </div>
         <% } %>
        

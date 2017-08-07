@@ -87,7 +87,7 @@ memberController.showRuns = (req, res) => {
         data: runs,
         id: req.params.id,
       });
-    // console.log(runs)
+    console.log(runs)
     }).catch(err => {
       console.log(err);
       res.status(500).json(err);

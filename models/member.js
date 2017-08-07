@@ -75,7 +75,7 @@ Member.createComment = (comment, id) => {
         (comments, rcvngmember, lvngmember)
         VALUES ($1, $2, $3)
         RETURNING *
-    `, [comment.comments, id, process.env.user_id])
+    `, [comment.comments, id, process.env.user_id, process.env.username])
 }
 
 
