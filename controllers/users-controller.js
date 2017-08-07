@@ -15,7 +15,7 @@ usersController.create = (req, res) => {
   }).then(user => {
     req.login(user, (err) => {
       if (err) return next(err);
-      res.redirect('user');
+      res.redirect('/user');
     });
   }).catch(err => {
     console.log(err);
