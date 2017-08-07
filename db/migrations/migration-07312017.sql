@@ -1,6 +1,6 @@
 CREATE DATABASE app_database;
 
-\c app_database
+
 
 CREATE TABLE IF NOT EXISTS members (
     id SERIAL PRIMARY KEY,

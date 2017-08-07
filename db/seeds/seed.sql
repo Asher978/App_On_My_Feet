@@ -1,2 +1,2 @@
-\c app_database
-\i member.sql
+-- \c app_database
+-- \i member.sql
