@@ -4,7 +4,8 @@ $(getData = () => {
     console.log('Jquery and main.js are loaded :)))))');
     // console.log(`Member ID: ${id}`);
     $.ajax({
-        url: `http://localhost:3000/api/${id}`,
+        // url: `http://localhost:3000/api/${id}`,
+        url: `http://peaceful-waters-85500.herokuapp.com/api/${id}`,
         method: 'GET',
         success: (rundata) => {
             for (let run of rundata) {
