@@ -10,6 +10,7 @@
 ![Screen Shot](https://github.com/Asher978/App_On_My_Feet/blob/master/assets/frame1.JPG)
 ![Screen Shot](https://github.com/Asher978/App_On_My_Feet/blob/master/assets/frame2.JPG)
 ![Screen Shot](https://github.com/Asher978/App_On_My_Feet/blob/master/assets/frame3.JPG)
+![Screen Shot](https://github.com/Asher978/App_On_My_Feet/blob/master/assets/frame4.JPG)
 
 ## User Stories
   *  User should be able to register by providing the required info(name, email, password)
