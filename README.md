@@ -31,6 +31,7 @@
   *  Used Leaflet to render markers on the map.
 
 ### Snippet of Code
+#### (fetch request to an endpoint that leads to my DB. Grabbing the long, lat and passing it to Leflet to draw markers)
 
 ``` 
 var locat=[];
